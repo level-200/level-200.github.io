@@ -421,17 +421,11 @@ function searchLoaded(index, docs) {
   const updateSearchFocus = function(evt) {
     const nextFocusedElement = evt.relatedTarget;
 
-    // If there's no related target (some browsers/platforms), hide search
-    if (!nextFocusedElement) {
-      hideSearch();
-      return;
-    }
-
     // Re-focusing on search bar - "keep focus"
     if (nextFocusedElement.id === 'search-input') return;
 
     // Re-focusing on the next search result element - "keep focus"
-    if (nextFocusedElement.classList && nextFocusedElement.classList.contains('search-result')) return;
+    if (nextFocusedElement.classList.contains('search-result')) return;
 
     // Otherwise, we're not focused on the search bar anymore. Hide!
     hideSearch();
