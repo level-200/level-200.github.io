@@ -93,12 +93,16 @@ function disableHeadStyleSheets() {
 // Site search
 
 function initSearch() {
-  var request = new XMLHttpRequest();
-  request.open('GET', '{{ "assets/js/search-data.json" | relative_url }}', true);
+  var primaryPath = '{{ "assets/js/search-data.json" | relative_url }}';
+  var fallbackPath = (function(){
+    var p = window.location.pathname;
+    if (!p.endsWith('/')) p = p.substring(0, p.lastIndexOf('/') + 1);
+    return p + 'assets/js/search-data.json';
+  })();
 
-  request.onload = function(){
-    if (request.status >= 200 && request.status < 400) {
-      var docs = JSON.parse(request.responseText);
+  function handleSearchResponse(req) {
+    if (req.status >= 200 && req.status < 400) {
+      var docs = JSON.parse(req.responseText);
 
       lunr.tokenizer.separator = {{ site.search.tokenizer_separator | default: site.search_tokenizer_separator | default: "/[\s\-/]+/" }}
 
@@ -125,16 +129,39 @@ function initSearch() {
       });
 
       searchLoaded(index, docs);
-    } else {
-      console.log('Error loading ajax request. Request status:' + request.status);
+      return true;
     }
-  };
+    return false;
+  }
 
-  request.onerror = function(){
-    console.log('There was a connection error');
-  };
+  function tryFetch(path, onSuccess, onFail) {
+    var req = new XMLHttpRequest();
+    req.open('GET', path, true);
+    req.onload = function() {
+      if (handleSearchResponse(req)) {
+        if (onSuccess) onSuccess();
+      } else {
+        if (onFail) onFail();
+      }
+    };
+    req.onerror = function() {
+      if (onFail) onFail();
+    };
+    req.send();
+  }
 
-  request.send();
+  // Try the Liquid-generated path first (works for configured baseurl),
+  // then fall back to a path relative to the current location (helps
+  // GitHub Pages project sites when baseurl wasn't set).
+  tryFetch(primaryPath, null, function(){
+    if (fallbackPath !== primaryPath) {
+      tryFetch(fallbackPath, null, function(){
+        console.log('Error loading ajax request for search-data.json');
+      });
+    } else {
+      console.log('Error loading ajax request for search-data.json');
+    }
+  });
 }
 
 function searchLoaded(index, docs) {
