@@ -106,7 +106,7 @@
   border-bottom: $border $border-color;
 
   @include mq(md) {
-    top: 100%;
+    top: $header-height;
     width: $search-results-width;
     max-height: calc(100vh - $header-height + 2px) !important;
   }
