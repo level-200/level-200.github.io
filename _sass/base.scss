@@ -17,7 +17,7 @@ html {
 
 body {
   font-family: $body-font-family;
-  font-size: inherit;
+  font-size: 1.125rem;
   line-height: $body-line-height;
   color: $body-text-color;
   background-color: $body-background-color;
@@ -48,7 +48,7 @@ h6,
 #toctitle {
   margin-top: 0;
   margin-bottom: 1em;
-  font-weight: 500;
+  font-weight: bold;
   line-height: $body-heading-line-height;
   color: $body-heading-color;
 }
@@ -64,12 +64,12 @@ a {
 }
 
 a:not([class]) {
-  text-decoration: underline;
+  text-decoration: none;
   text-decoration-color: $border-color;
-  text-underline-offset: 2px;
+  text-underline-offset: 0;
 
   &:hover {
-    text-decoration-color: rgba($link-color, 0.45);
+    color: $body-text-color;
   }
 }
 

@@ -5,7 +5,7 @@
   z-index: 2;
   flex-grow: 1;
   height: $sp-10;
-  padding: $sp-2;
+  padding: 0;
   transition: padding linear #{$transition-duration * 0.5};
 
   @include mq(md) {
@@ -13,25 +13,20 @@
     width: auto !important;
     height: 100% !important;
     padding: 0;
-    transition: none;
   }
 }
 
 .search-input-wrap {
   position: relative;
   z-index: 1;
-  height: $sp-8;
+  height: $sp-10;
   overflow: hidden;
   border-radius: $border-radius;
-  box-shadow:
-    0 1px 2px rgba(0, 0, 0, 0.12),
-    0 3px 10px rgba(0, 0, 0, 0.08);
-  transition: height linear #{$transition-duration * 0.5};
+  box-shadow: none;
 
   @include mq(md) {
     position: absolute;
-    width: 100%;
-    max-width: $search-results-width;
+    width: $search-results-width;
     height: 100% !important;
     border-radius: 0;
     box-shadow: none;
@@ -45,7 +40,7 @@
   height: 100%;
   padding: $sp-2 $gutter-spacing-sm $sp-2 #{$gutter-spacing-sm + $sp-5};
   font-size: 1rem;
-  color: $body-text-color;
+  color: $link-color;
   background-color: $search-background-color;
   border-top: 0;
   border-right: 0;
@@ -54,17 +49,26 @@
   border-radius: 0;
 
   @include mq(md) {
-    padding: $sp-2 $gutter-spacing-sm $sp-2 #{$gutter-spacing + $sp-5};
-    font-size: 0.875rem;
+    padding: $sp-2 $gutter-spacing $sp-2 #{$gutter-spacing + $sp-5};
+    font-size: 1rem;
     background-color: $body-background-color;
     transition: padding-left linear #{$transition-duration * 0.5};
   }
 
   &:focus {
     outline-offset: -1px;
+    color: $body-heading-color;
 
     + .search-label .search-icon {
-      color: $link-color;
+      color: $body-heading-color;
+    }
+  }
+
+  &:hover {
+    color: $body-heading-color;
+    
+    + .search-label .search-icon {
+      color: $body-heading-color;
     }
   }
 }
@@ -84,7 +88,7 @@
     width: #{$sp-4 * 1.2};
     height: #{$sp-4 * 1.2};
     align-self: center;
-    color: $grey-dk-000;
+    color: $link-color;
   }
 }
 
@@ -98,14 +102,13 @@
   background-color: $search-background-color;
   border-bottom-right-radius: $border-radius;
   border-bottom-left-radius: $border-radius;
-  box-shadow:
-    0 1px 2px rgba(0, 0, 0, 0.12),
-    0 3px 10px rgba(0, 0, 0, 0.08);
+  box-shadow: none;
+  border-bottom: $border $border-color;
 
   @include mq(md) {
     top: 100%;
     width: $search-results-width;
-    max-height: calc(100vh - 200%) !important;
+    max-height: calc(100vh - $header-height + 2px) !important;
   }
 }
 
@@ -127,12 +130,20 @@
 
 .search-result {
   display: block;
-  padding: $sp-1 $sp-3;
+  padding: $sp-1 $gutter-spacing-sm;
   outline-offset: -1px;
+
+  @include mq(md) {
+    padding: $sp-1 $gutter-spacing;
+  }
 
   &:hover,
   &.active {
-    background-color: $feedback-color;
+    color: $body-heading-color;
+
+    svg {
+      color: $body-heading-color;
+    }
   }
 }
 
@@ -155,12 +166,8 @@
   overflow-wrap: break-word;
 
   &.search-result-doc-parent {
-    opacity: 0.5;
-    @include fs-3;
-
-    @include mq(md) {
-      @include fs-2;
-    }
+    font-size: $font-size-4;
+    font-weight: bold;
   }
 
   .search-result-icon {
@@ -179,6 +186,7 @@
 .search-result-section {
   margin-left: #{$sp-4 + $sp-2};
   overflow-wrap: break-word;
+  font-size: $font-size-4;
 }
 
 .search-result-rel-url {
@@ -188,7 +196,7 @@
   color: $search-result-preview-color;
   text-overflow: ellipsis;
   white-space: nowrap;
-  @include fs-1;
+  font-size: $font-size-4;
 }
 
 .search-result-previews {
@@ -201,7 +209,7 @@
   overflow-wrap: break-word;
   border-left: $border;
   border-left-color: $border-color;
-  @include fs-2;
+  font-size: $font-size-4;
 
   @include mq(sm) {
     display: inline-block;
@@ -209,6 +217,7 @@
     padding-left: $sp-2;
     margin-left: 0;
     vertical-align: top;
+    font-size: $font-size-4;
   }
 }
 
@@ -217,12 +226,16 @@
 }
 
 .search-result-highlight {
-  font-weight: bold;
+  text-decoration: underline;
 }
 
 .search-no-result {
-  padding: $sp-2 $sp-3;
-  @include fs-3;
+  padding: $sp-1 $gutter-spacing-sm;
+  font-size: $font-size-4;
+
+  @include mq(md) {
+    padding: $sp-2 $gutter-spacing;
+  }
 }
 
 .search-button {
@@ -234,10 +247,8 @@
   height: $sp-9;
   background-color: $search-background-color;
   border: 1px solid rgba($link-color, 0.3);
-  border-radius: #{$sp-9 * 0.5};
-  box-shadow:
-    0 1px 2px rgba(0, 0, 0, 0.12),
-    0 3px 10px rgba(0, 0, 0, 0.08);
+  border-radius: 0;
+  box-shadow: none;
   align-items: center;
   justify-content: center;
 }
@@ -249,70 +260,50 @@
   z-index: 1;
   width: 0;
   height: 0;
-  background-color: rgba(0, 0, 0, 0.3);
-  opacity: 0;
-  transition:
-    opacity ease $transition-duration,
-    width 0s $transition-duration,
-    height 0s $transition-duration;
 }
 
 .search-active {
   .search {
     position: fixed;
-    top: 0;
+    top: $header-height;
     left: 0;
     width: 100%;
     height: 100%;
     padding: 0;
+
+    @include mq(md) {
+      top: 0;
+    }
   }
 
   .search-input-wrap {
+    overflow: visible;
     height: $sp-10;
     border-radius: 0;
 
+    &::after {
+      content: "";
+      position: absolute;
+      left: $gutter-spacing-sm;
+      right: $gutter-spacing-sm;
+      bottom: -1px;
+      height: 1px;
+      background-color: $border-color;
+
+      @include mq(md) {
+        left: $gutter-spacing;
+        right: $gutter-spacing;
+      }
+    }
+
     @include mq(md) {
       width: $search-results-width;
-      box-shadow:
-        0 1px 2px rgba(0, 0, 0, 0.12),
-        0 3px 10px rgba(0, 0, 0, 0.08);
-    }
-  }
-
-  .search-input {
-    background-color: $search-background-color;
-
-    @include mq(md) {
-      padding-left: 2.3rem;
-    }
-  }
-
-  .search-label {
-    @include mq(md) {
-      padding-left: 0.6rem;
+      box-shadow: none;
     }
   }
 
   .search-results {
     display: block;
-  }
-
-  .search-overlay {
-    width: 100%;
-    height: 100%;
-    opacity: 1;
-    transition:
-      opacity ease $transition-duration,
-      width 0s,
-      height 0s;
-  }
-
-  @include mq(md) {
-    .main {
-      position: fixed;
-      right: 0;
-      left: 0;
-    }
   }
 
   .main-header {

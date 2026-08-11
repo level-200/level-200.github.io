@@ -3,20 +3,19 @@
 
 h1,
 .text-alpha {
-  font-weight: 300;
-
-  @include fs-8;
+  font-size: $font-size-9;
 }
 
 h2,
 .text-beta,
 #toctitle {
-  @include fs-6;
+  font-size: $font-size-7;
+  line-height: $body-heading-line-height;
 }
 
 h3,
 .text-gamma {
-  @include fs-5;
+  font-size: $font-size-6;
 }
 
 h4,

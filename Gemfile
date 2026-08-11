@@ -1,12 +1,10 @@
 source "https://rubygems.org"
-gemspec
 
-gem "base64"
-gem "csv"
-
-gem "jekyll-github-metadata", ">= 2.15"
-
+gem "jekyll", ">= 3.8.5"
+gem "jekyll-seo-tag", ">= 2.0", group: :jekyll_plugins
 gem "jekyll-include-cache", group: :jekyll_plugins
+gem "rake", ">= 12.3.1"
+
 gem "jekyll-sitemap", group: :jekyll_plugins
 gem 'wdm', '>= 0.2.0' if Gem.win_platform?
 

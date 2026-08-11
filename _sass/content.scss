@@ -192,6 +192,10 @@
   h6:hover > .anchor-heading {
     svg {
       visibility: visible;
+
+      &:hover {
+        color: $body-heading-color;
+      }
     }
   }
 
@@ -207,6 +211,7 @@
   h6,
   #toctitle {
     position: relative;
+    scroll-margin-top: $header-height;
     margin-top: 1.5em;
     margin-bottom: 0.25em;
 

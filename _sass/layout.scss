@@ -1,10 +1,12 @@
 // The basic two column layout
 
 .side-bar {
-  z-index: 0;
+  z-index: 1;
   display: flex;
   flex-wrap: wrap;
   background-color: $sidebar-color;
+  position: sticky;
+  top: 0;
 
   @include mq(md) {
     flex-flow: column nowrap;
@@ -16,7 +18,7 @@
   }
 
   @include mq(lg) {
-    width: calc((100% - #{$nav-width + $content-width}) / 2 + #{$nav-width});
+    width: 0;
     min-width: $nav-width;
   }
 
@@ -26,13 +28,7 @@
     }
 
     @include mq(lg) {
-      // stylelint-disable function-name-case
-      // disable for Max(), we want to use the CSS max() function
-      margin-left: Max(
-        #{$nav-width},
-        calc((100% - #{$nav-width + $content-width}) / 2 + #{$nav-width})
-      );
-      // stylelint-enable function-name-case
+      margin-left: $nav-width;
     }
 
     .main-header {
@@ -49,6 +45,7 @@
 
         @include mq(md) {
           display: flex;
+          top: 0;
         }
       }
     }
@@ -60,30 +57,40 @@
 
   @include mq(md) {
     position: relative;
-    max-width: $content-width;
+    max-width: 100%;
   }
 }
 
 .main-content-wrap {
-  padding-top: $gutter-spacing-sm;
-  padding-bottom: $gutter-spacing-sm;
+  padding-top: 0;
+  padding-bottom: 0;
 
   @include container;
 
   @include mq(md) {
-    padding-top: $gutter-spacing;
-    padding-bottom: $gutter-spacing;
+    padding-top: 0;
+    padding-bottom: 0;
   }
 }
 
 .main-header {
-  z-index: 0;
-  border-bottom: $border $border-color;
+  z-index: 1;
+  position: sticky;
 
   @include mq(md) {
     display: flex;
     justify-content: space-between;
     height: $header-height;
+    top: 0;
+    border-bottom: $border $border-color;
+  }
+
+  &.nav-open {
+    position: fixed;
+    top: $header-height;
+    left: 0;
+    right: 0;
+    z-index: 2;
   }
 }
 
@@ -102,12 +109,21 @@
 
   &.nav-open {
     display: block;
+    position: absolute;
+    top: $header-height;
+    left: 0;
+    right: 0;
+    max-height: calc(100vh - $header-height + 1px);
+    overflow-y: auto;
+   -webkit-overflow-scrolling: touch;
+    z-index: 2;
+    background-color: $sidebar-color;
+    padding-top: $sp-10;
+    border-bottom: $border $border-color;
   }
 
   @include mq(md) {
     display: block;
-    padding-top: $sp-8;
-    padding-bottom: $gutter-spacing-sm;
     overflow-y: auto;
     flex: 1 1 auto;
   }
@@ -117,11 +133,11 @@
   display: flex;
   min-height: $header-height;
   align-items: center;
+  border-bottom: $border $border-color;
 
   @include mq(md) {
     height: $header-height;
     max-height: $header-height;
-    border-bottom: $border $border-color;
   }
 }
 
@@ -132,8 +148,9 @@
   align-items: center;
   padding-top: $sp-3;
   padding-bottom: $sp-3;
-  color: $body-heading-color;
+  color: $link-color;
   outline-offset: -1px; // Fixes outline clipping on both desktop/mobile "views"
+  font-weight: bold;
 
   @include container;
 
@@ -162,6 +179,12 @@
   padding: $gutter-spacing-sm;
   align-items: center;
   outline-offset: -1px; // Fixes outline clipping on both desktop/mobile "views"
+
+  &:hover{ 
+    svg {
+      color: $body-heading-color;
+    }
+  }
 }
 
 @include mq(md) {
@@ -170,13 +193,13 @@
   }
 }
 
-.site-title:hover {
-  background-image: linear-gradient(
-    -90deg,
-    rgba($feedback-color, 1) 0%,
-    rgba($feedback-color, 0.8) 80%,
-    rgba($feedback-color, 0) 100%
-  );
+.site-title:hover,
+.site-title.active {
+  color: $body-heading-color;
+}
+
+.site-title.active {
+  text-decoration: none;
 }
 
 .site-button:hover {

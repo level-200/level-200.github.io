@@ -275,7 +275,6 @@
     {{ activation_collection_prefix }} > li:nth-child({{ nav_levels[1] }})
     {%- for i in (2..nav_page_level) %} > ul > li:nth-child({{ nav_levels[i] }})
     {%- endfor %} > a {
-      font-weight: 600;
       text-decoration: none;
     }
 
