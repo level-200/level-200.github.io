@@ -95,6 +95,7 @@
 .search-results {
   position: absolute;
   left: 0;
+  top: $sp-10;
   display: none;
   width: 100%;
   max-height: calc(100% - #{$sp-10});
@@ -106,7 +107,6 @@
   border-bottom: $border $border-color;
 
   @include mq(md) {
-    top: 100%;
     width: $search-results-width;
     max-height: calc(100vh - $header-height + 2px) !important;
   }
