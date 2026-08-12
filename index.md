@@ -1,10 +1,10 @@
 ---
-title: Level 200
+title: Site Info
 permalink: /
 nav_exclude: true
 ---
 
-# Level 200
+# Site Info
 
 ## About
 
