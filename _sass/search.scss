@@ -109,7 +109,7 @@
   @include mq(md) {
     top: 100%;
     width: $search-results-width;
-    max-height: calc(100vh - #{$header-height} + 2px) !important;
+    max-height: calc(100vh - 3.75rem + 2px) !important;
   }
 }
 
