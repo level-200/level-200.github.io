@@ -97,7 +97,8 @@
   left: 0;
   display: none;
   width: 100%;
-  max-height: calc(100% - #{$sp-10});
+  max-height: calc(100vh - #{$header-height} - #{$sp-10} + 2px);
+  min-height: 0;
   overflow-y: auto;
   background-color: $search-background-color;
   border-bottom-right-radius: $border-radius;
@@ -108,7 +109,7 @@
   @include mq(md) {
     top: 100%;
     width: $search-results-width;
-    max-height: calc(100vh - $header-height + 2px) !important;
+    max-height: calc(100vh - #{$sp-10} + 2px) !important;
   }
 }
 
