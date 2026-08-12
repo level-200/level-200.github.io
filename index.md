@@ -1,11 +1,8 @@
 ---
 title: Level 200
-description: Test! 1, 2, 3!
 permalink: /
 nav_exclude: true
 ---
-
-<meta name="description" content="Test! 4, 5, 6!">
 
 # Level 200
 
