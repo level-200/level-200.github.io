@@ -1,6 +1,7 @@
 ---
 title: Differential Calculus*
-permalink: /differential-calculus
+permalink: /old-site-topics/differential-calculus
+parent: Old Site Topics*
 nav_order: 3
 ---
 
@@ -44,7 +45,7 @@ instead of, say,
 
 $$\lim_{\Delta x \to 0} \frac{f(x + \Delta x) - f(x - \Delta x)}{2 \Delta x}?$$
 
-Wouldn't that get us the same thing? And that second limit seems "nicer" in a way, since it's symmetric about $$x.$$ Here's why we use the particular limit that we do: We'd like to need that $$f$$ be well-defined for its derivative to exist. If $$f(x)$$ is not part of the definition of $$\frac{df}{dx}$$, we can't necessarily guarantee that $$\frac{df}{dx}$$ exists $$\Longrightarrow f(x)$$ exists.
+Wouldn't that get us the same thing? And that second limit seems "nicer" in a way, since it's symmetric about $$x.$$ Here's why we use the particular limit that we do: We'd like to need that $$f$$ be well-defined for its derivative to exist. If $$f(x)$$ is not part of the definition of $$\frac{df}{dx}$$, we can't necessarily guarantee that $$\frac{df}{dx}$$ exists $$\implies f(x)$$ exists.
 
 Requiring that $$f(x)$$ be part of the limit already leaves us only one option, but the nice thing is that this option also includes the requirement that $$f$$ be continuous at $$x$$, which we would also have wanted to require had we needed to.
 
@@ -54,7 +55,7 @@ Let $$f \colon X \subseteq \mathbb{R} \longrightarrow \mathbb{R}$$. Then if $$f$
 
 **Proof.** Assume that $$\frac{df}{dx}$$ exists (i.e., $$f$$ is differentiable at $$x$$). Then
 
-$$\lim_{\Delta x \to 0} \frac{f(x + \Delta x) - f(x)}{\Delta x} \lim_{\Delta x \to 0} \Delta x = \lim_{\Delta x \to 0} f(x + \Delta x) - f(x) = 0 \Longrightarrow \lim_{\Delta x \to 0} f(x + \Delta x) = f(x) \Longleftrightarrow \lim_{y \to x} f(y) = f(x).$$
+$$\lim_{\Delta x \to 0} \frac{f(x + \Delta x) - f(x)}{\Delta x} \lim_{\Delta x \to 0} \Delta x = \lim_{\Delta x \to 0} f(x + \Delta x) - f(x) = 0 \implies \lim_{\Delta x \to 0} f(x + \Delta x) = f(x) \Longleftrightarrow \lim_{y \to x} f(y) = f(x).$$
 
 $$f$$ is continuous at $$x$$ by [Definition: Continuous](/limits#definition-continuous). $$\Box$$
 
@@ -116,7 +117,7 @@ $$D(x) = f(x) - \left[\frac{f(b) - f(a)}{b - a}(x - a) + f(a)\right].$$
 
 $$D(x)$$ is continuous from the right at $$a$$, continuous from the left at $$b$$, and differentiable with respect to $$x$$ on $$(a,b)$$, and $$D(a) = D(b) = 0$$. Therefore, by [Rolle's Theorem](/differential-calculus#rolles-theorem),
 
-$$\exists c \in (a,b) \mid \left.\frac{d(D(x))}{dx}\right\rvert_c = \left.\frac{df}{dx}\right\rvert_c - \frac{f(b) - f(a)}{b - a} = 0 \Longrightarrow \left.\frac{df}{dx}\right\rvert_c = \frac{f(b) - f(a)}{b - a}. \text{ } \Box$$
+$$\exists c \in (a,b) \mid \left.\frac{d(D(x))}{dx}\right\rvert_c = \left.\frac{df}{dx}\right\rvert_c - \frac{f(b) - f(a)}{b - a} = 0 \implies \left.\frac{df}{dx}\right\rvert_c = \frac{f(b) - f(a)}{b - a}. \text{ } \Box$$
 
 ---
 
@@ -142,7 +143,7 @@ $$h(x) = [g(b) - g(a)]f(x) - [f(b) - f(a)]g(x).$$
 
 Then $$h(a) = h(b)$$ and $$h$$ is continuous from the right at $$a$$, continuous from the left at $$b$$, and differentiable on $$(a,b)$$. Thus, by the [Mean Value Theorem](/differential-calculus#mean-value-theorem), 
 
-$$\exists c \in (a,b) \mid \left.\frac{d(h(x))}{dx}\right\rvert_c = [g(b) - g(a)]\left.\frac{df}{dx}\right\rvert_c - [f(b) - f(a)]\left.\frac{dg}{dx}\right\rvert_c = 0 \Longrightarrow [f(b) - f(a)]\left.\frac{dg}{dx}\right\rvert_c = [g(b) - g(a)]\left.\frac{df}{dx}\right\rvert_c. \text{ } \Box$$
+$$\exists c \in (a,b) \mid \left.\frac{d(h(x))}{dx}\right\rvert_c = [g(b) - g(a)]\left.\frac{df}{dx}\right\rvert_c - [f(b) - f(a)]\left.\frac{dg}{dx}\right\rvert_c = 0 \implies [f(b) - f(a)]\left.\frac{dg}{dx}\right\rvert_c = [g(b) - g(a)]\left.\frac{df}{dx}\right\rvert_c. \text{ } \Box$$
 
 ---
 
@@ -162,7 +163,7 @@ $$f(a) = 0 = g(a).$$
 
 Let $$x \in (a, a + \delta) \mid g(y), \left.\frac{dg}{dx}\right\rvert_y \neq 0 \; \forall y \in (a,x)$$. (This must be possible because both limits exist.) Then by [Cauchy's Mean Value Theorem](/differential-calculus#cauchys-mean-value-theorem), 
 
-$$\exists c \in (a, x) \mid f(x)\left.\frac{dg}{dx}\right\rvert_c = g(x)\left.\frac{df}{dx}\right\rvert_c \Longrightarrow \frac{f(x)}{g(x)} = \frac{\left.\frac{df}{dx}\right\rvert_c}{\left.\frac{dg}{dx}\right\rvert_c} \Longrightarrow \lim_{x \to a^+} \frac{f(x)}{g(x)} = \lim_{x \to a^+} \frac{\left.\frac{df}{dx}\right\rvert_c}{\left.\frac{dg}{dx}\right\rvert_c} = \lim_{c \to a^+} \frac{\left.\frac{df}{dx}\right\rvert_c}{\left.\frac{dg}{dx}\right\rvert_c} = \lim_{x \to a^+} \frac{\frac{df}{dx}}{\frac{dg}{dx}}.$$
+$$\exists c \in (a, x) \mid f(x)\left.\frac{dg}{dx}\right\rvert_c = g(x)\left.\frac{df}{dx}\right\rvert_c \implies \frac{f(x)}{g(x)} = \frac{\left.\frac{df}{dx}\right\rvert_c}{\left.\frac{dg}{dx}\right\rvert_c} \implies \lim_{x \to a^+} \frac{f(x)}{g(x)} = \lim_{x \to a^+} \frac{\left.\frac{df}{dx}\right\rvert_c}{\left.\frac{dg}{dx}\right\rvert_c} = \lim_{c \to a^+} \frac{\left.\frac{df}{dx}\right\rvert_c}{\left.\frac{dg}{dx}\right\rvert_c} = \lim_{x \to a^+} \frac{\frac{df}{dx}}{\frac{dg}{dx}}.$$
 
 A similar argument applies for approaching from the left, and thus we must have
 
@@ -278,7 +279,7 @@ $$\left.\frac{df^{-1}}{dy}\right\rvert_{f(x)} = \frac{1}{\frac{df}{dx}}.$$
 
 $$\left.\frac{df^{-1}}{dy}\right\rvert_{f(x)} = \lim_{\Delta y \to 0} \frac{f^{-1}(f(x) + \Delta y) - f^{-1}(f(x))}{\Delta y} = \lim_{\Delta x \to 0} \frac{f^{-1}(f(x + \Delta x)) - f^{-1}(f(x))}{f(x + \Delta x) - f(x)} = \lim_{\Delta x \to 0} \frac{\Delta x}{f(x + \Delta x) - f(x)} = \lim_{\Delta x \to 0} \frac{1}{\frac{f(x + \Delta x) - f(x)}{\Delta x}} = \frac{1}{\underset{\Delta x \to 0}{\lim} \frac{f(x + \Delta x) - f(x)}{\Delta x}} = \frac{1}{\frac{df}{dx}}$$
 
-since $$\Delta x \to 0 \Longrightarrow \Delta y \to 0$$ by [Differentiable Implies Continuous](/differential-calculus#theorem-differentiable-implies-continuous). $$\Box$$
+since $$\Delta x \to 0 \implies \Delta y \to 0$$ by [Differentiable Implies Continuous](/differential-calculus#theorem-differentiable-implies-continuous). $$\Box$$
 
 ---
 
@@ -296,11 +297,11 @@ It remains to be shown that this last limit exists. Note firstly that this is tr
 
 Let $$r \in \mathbb{Z} > 0$$. Then 
 
-$$ra^r = \underbrace{a^r + \cdots + a^r}_{r \text{ terms}} > a^{r - 1} + a^{r - 2} + \cdots + 1 \Longrightarrow ra^r(a - 1) > a^r - 1$$
+$$ra^r = \underbrace{a^r + \cdots + a^r}_{r \text{ terms}} > a^{r - 1} + a^{r - 2} + \cdots + 1 \implies ra^r(a - 1) > a^r - 1$$
 
 after multiplying both sides of the inequality by $$a - 1$$. Add $$r(a^r - 1)$$ to both sides:
 
-$$r(a^{r + 1} - 1) > (r + 1)(a^r - 1) \Longrightarrow \frac{a^{r + 1} - 1}{r + 1} > \frac{a^r - 1}{r}.$$
+$$r(a^{r + 1} - 1) > (r + 1)(a^r - 1) \implies \frac{a^{r + 1} - 1}{r + 1} > \frac{a^r - 1}{r}.$$
 
 Thus, where $$s \in \mathbb{Z} > r$$, 
 
@@ -314,13 +315,13 @@ $$\gamma > 1.$$
 
 Therefore
 
-$$\frac{\gamma^{vu} - 1}{vu} > \frac{\gamma^{tw} - 1}{tw} \Longrightarrow \frac{a^\frac{v}{w} - 1}{vu} > \frac{a^\frac{t}{u} - 1}{tw} \Longrightarrow \frac{a^{s} - 1}{s} > \frac{a^r - 1}{r}.$$
+$$\frac{\gamma^{vu} - 1}{vu} > \frac{\gamma^{tw} - 1}{tw} \implies \frac{a^\frac{v}{w} - 1}{vu} > \frac{a^\frac{t}{u} - 1}{tw} \implies \frac{a^{s} - 1}{s} > \frac{a^r - 1}{r}.$$
 
 Since $$t, u, v, w$$ were arbitrary, this must hold $$\forall r, s \in \mathbb{Q} > 0 \mid s > r$$. Since $$\frac{a^{\Delta x} - 1}{\Delta x}$$ is continuous $$\forall \Delta x \in \mathbb{R} \neq 0$$, we have that $$\frac{a^{\Delta x} - 1}{\Delta x}$$ increases with $$\Delta x$$ on $$(0, \infty)$$. We also have that $$\frac{a^{\Delta x} - 1}{\Delta x} > 0 \; \forall \Delta x > 0$$. Thus,
 
-$$\exists L \in \mathbb{R} \geq 0 \mid \forall \epsilon > 0 \; \exists \delta > 0 \mid \Delta x \in (0, \delta) \Longrightarrow \frac{a^{\Delta x} - 1}{\Delta x} \in [L, L + \epsilon) \subset (L - \epsilon, L + \epsilon) \Longleftrightarrow \lim_{\Delta x \to 0^+} \frac{a^{\Delta x} - 1}{\Delta x} = L,$$
+$$\exists L \in \mathbb{R} \geq 0 \mid \forall \epsilon > 0 \; \exists \delta > 0 \mid \Delta x \in (0, \delta) \implies \frac{a^{\Delta x} - 1}{\Delta x} \in [L, L + \epsilon) \subset (L - \epsilon, L + \epsilon) \Longleftrightarrow \lim_{\Delta x \to 0^+} \frac{a^{\Delta x} - 1}{\Delta x} = L,$$
 
-$$\lim_{\Delta x \to 0^-} \frac{a^{\Delta x} - 1}{\Delta x} = \lim_{\Delta x \to 0^+} \frac{a^{-\Delta x} - 1}{-\Delta x}= \lim_{\Delta x \to 0^+} \frac{a^{\Delta x} - 1}{a^{\Delta x}\Delta x} = \lim_{\Delta x \to 0^+} \frac{a^{\Delta x} - 1}{\Delta x} = L \Longrightarrow \lim_{\Delta x \to 0} \frac{a^{\Delta x} - 1}{\Delta x} = L.$$
+$$\lim_{\Delta x \to 0^-} \frac{a^{\Delta x} - 1}{\Delta x} = \lim_{\Delta x \to 0^+} \frac{a^{-\Delta x} - 1}{-\Delta x}= \lim_{\Delta x \to 0^+} \frac{a^{\Delta x} - 1}{a^{\Delta x}\Delta x} = \lim_{\Delta x \to 0^+} \frac{a^{\Delta x} - 1}{\Delta x} = L \implies \lim_{\Delta x \to 0} \frac{a^{\Delta x} - 1}{\Delta x} = L.$$
 
 If $$a \in (0,1)$$, $$\exists b \in \mathbb{R} > 1 \mid a = \frac{1}{b}$$, and so
 
@@ -406,7 +407,7 @@ $$\ln(e^x) = x \ln e = x \; \forall x \in \mathbb{R},$$
 
 and similarly,
 
-$$\ln x = \ln x \cdot \ln e = \ln(e^{\ln x}) \Longrightarrow x = e^{\ln x} \; \forall x > 0$$
+$$\ln x = \ln x \cdot \ln e = \ln(e^{\ln x}) \implies x = e^{\ln x} \; \forall x > 0$$
 
 since $$\ln$$ is monotonous. Therefore $$e^x$$ and $$\ln x$$ are inverses of each other, and so we know how to find the derivative of $$\ln$$.
 
@@ -420,7 +421,7 @@ $$\ln(e^x) = x \ln e = x \; \forall x \in \mathbb{R}.$$
 
 Therefore $$\ln x$$ is the inverse of $$e^x$$, so by [Inverse Function Rule](/differential-calculus#theorem-inverse-function-rule) and the definition of $$e$$, 
 
-$$\left.\frac{d(\ln y)}{dy}\right\rvert_{e^x} = \frac{1}{\frac{d(e^x)}{dx}} = \frac{1}{e^x} \Longrightarrow \frac{d(\ln x)}{dx} = \frac{1}{e^{\ln x}} = \frac{1}{x} \; \forall x > 0. \text{ } \Box$$
+$$\left.\frac{d(\ln y)}{dy}\right\rvert_{e^x} = \frac{1}{\frac{d(e^x)}{dx}} = \frac{1}{e^x} \implies \frac{d(\ln x)}{dx} = \frac{1}{e^{\ln x}} = \frac{1}{x} \; \forall x > 0. \text{ } \Box$$
 
 ---
 
@@ -448,7 +449,7 @@ $$\frac{d(f(x)g(x))}{dx} = \frac{df}{dx} g(x) + f(x) \frac{dg}{dx}.$$
 
 **Proof.** Let $$y = f(x)g(x)$$. Then if $$f(x), g(x) \neq 0$$,
 
-$$\ln \lvert y \rvert = \ln(\lvert f(x) \rvert) + \ln(\lvert g(x) \rvert) \Longrightarrow \frac{1}{y} \frac{dy}{dx} = \frac{1}{f(x)g(x)} \frac{d(f(x)g(x))}{dx} = \frac{1}{f(x)} \frac{df}{dx} + \frac{1}{g(x)} \frac{dg}{dx} \Longrightarrow \frac{d(f(x)g(x))}{dx} = \frac{df}{dx} g(x) + f(x) \frac{dg}{dx}$$
+$$\ln \lvert y \rvert = \ln(\lvert f(x) \rvert) + \ln(\lvert g(x) \rvert) \implies \frac{1}{y} \frac{dy}{dx} = \frac{1}{f(x)g(x)} \frac{d(f(x)g(x))}{dx} = \frac{1}{f(x)} \frac{df}{dx} + \frac{1}{g(x)} \frac{dg}{dx} \implies \frac{d(f(x)g(x))}{dx} = \frac{df}{dx} g(x) + f(x) \frac{dg}{dx}$$
 
 by [Derivative of Natural Logarithm of Absolute Value](/differential-calculus#theorem-derivative-of-natural-logarithm-of-absolute-value), [Chain Rule](/differential-calculus#theorem-chain-rule), [Natural Logarithm Product Property](/differential-calculus#theorem-natural-logarithm-product-property), and [Sum Rule](/differential-calculus#theorem-sum-rule). If $$f(x) = 0$$, 
 
@@ -464,7 +465,7 @@ $$\frac{d\left(\frac{f(x)}{g(x)}\right)}{dx} = \frac{g(x) \frac{df}{dx} - f(x) \
 
 **Proof.** Let $$y = \frac{f(x)}{g(x)}$$. Then if $$f(x) \neq 0$$,
 
-$$\ln \lvert y \rvert = \ln \lvert f(x) \rvert + \ln \lvert g(x)^{-1} \rvert = \ln \lvert f(x) \rvert - \ln \lvert g(x) \rvert \Longrightarrow \frac{1}{y} \frac{dy}{dx} = \frac{g(x)}{f(x)} \frac{d\left(\frac{f(x)}{g(x)}\right)}{dx} = \frac{1}{f(x)} \frac{df}{dx} - \frac{1}{g(x)} \frac{dg}{dx} \Longrightarrow \frac{d\left(\frac{f(x)}{g(x)}\right)}{dx} = \frac{1}{g(x)} \frac{df}{dx} - \frac{f(x)}{g(x)^2} \frac{dg}{dx} = \frac{g(x)\frac{df}{dx} - f(x) \frac{dg}{dx}}{g(x)^2}$$
+$$\ln \lvert y \rvert = \ln \lvert f(x) \rvert + \ln \lvert g(x)^{-1} \rvert = \ln \lvert f(x) \rvert - \ln \lvert g(x) \rvert \implies \frac{1}{y} \frac{dy}{dx} = \frac{g(x)}{f(x)} \frac{d\left(\frac{f(x)}{g(x)}\right)}{dx} = \frac{1}{f(x)} \frac{df}{dx} - \frac{1}{g(x)} \frac{dg}{dx} \implies \frac{d\left(\frac{f(x)}{g(x)}\right)}{dx} = \frac{1}{g(x)} \frac{df}{dx} - \frac{f(x)}{g(x)^2} \frac{dg}{dx} = \frac{g(x)\frac{df}{dx} - f(x) \frac{dg}{dx}}{g(x)^2}$$
 
 by [Derivative of Natural Logarithm of Absolute Value](/differential-calculus#theorem-derivative-of-natural-logarithm-of-absolute-value), [Chain Rule](/differential-calculus#theorem-chain-rule), [Natural Logarithm Product Property](/differential-calculus#theorem-natural-logarithm-product-property), [Natural Logarithm Power Property](/differential-calculus#theorem-natural-logarithm-power-property), and [Sum Rule](/differential-calculus#theorem-sum-rule). If $$f(x) = 0$$,
 
@@ -480,7 +481,7 @@ $$\frac{d(x^n)}{dx} = nx^{n - 1}.$$
 
 **Proof.** Let $$y = x^n$$. Then where $$x \neq 0$$,
 
-$$\ln \lvert y \rvert = \ln \lvert x^n \rvert = n \ln \lvert x \rvert \Longrightarrow \frac{1}{y} \frac{dy}{dx} = \frac{1}{x^n} \frac{d(x^n)}{dx} = \frac{n}{x} \Longrightarrow \frac{d(x^n)}{dx} = nx^{n - 1}$$
+$$\ln \lvert y \rvert = \ln \lvert x^n \rvert = n \ln \lvert x \rvert \implies \frac{1}{y} \frac{dy}{dx} = \frac{1}{x^n} \frac{d(x^n)}{dx} = \frac{n}{x} \implies \frac{d(x^n)}{dx} = nx^{n - 1}$$
 
 by [Derivative of Natural Logarithm of Absolute Value](/differential-calculus#theorem-derivative-of-natural-logarithm-of-absolute-value), [Chain Rule](/differential-calculus#theorem-chain-rule), [Natural Logarithm Power Property](/differential-calculus#theorem-natural-logarithm-power-property), and [Constant Factor Rule](/differential-calculus#theorem-constant-factor-rule). If $$x = 0$$,
 
@@ -488,7 +489,7 @@ $$\frac{d(x^n)}{dx} = \lim_{\Delta x \to 0} \frac{(x + \Delta x)^n - x^n}{\Delta
 
 If $$n < 1$$ then
 
-$$\exists a > 0 \mid n - 1 = -a \Longrightarrow (\Delta x)^{n - 1} = \frac{1}{(\Delta x)^a}$$
+$$\exists a > 0 \mid n - 1 = -a \implies (\Delta x)^{n - 1} = \frac{1}{(\Delta x)^a}$$
 
 and the limit does not exist, nor does $$nx^{n-1}$$. If $$n > 1$$ then the limit is $$0 = nx^{n-1}$$ by continuity. $$\Box$$
 
@@ -500,7 +501,7 @@ $$\frac{d(\log_a(x))}{dx} = \frac{1}{x \ln a} \; \forall x > 0.$$
 
 **Proof.** By [Inverse Function Rule](/differential-calculus#theorem-inverse-function-rule),
 
-$$\left.\frac{d(\log_a(y))}{dy}\right\rvert_{a^x} = \frac{1}{\frac{d(a^x)}{dx}} = \frac{1}{a^x \ln a} \Longrightarrow \frac{d(\log_a(x))}{dx} = \frac{1}{x \ln a} \; \forall x > 0. \text{ } \Box$$
+$$\left.\frac{d(\log_a(y))}{dy}\right\rvert_{a^x} = \frac{1}{\frac{d(a^x)}{dx}} = \frac{1}{a^x \ln a} \implies \frac{d(\log_a(x))}{dx} = \frac{1}{x \ln a} \; \forall x > 0. \text{ } \Box$$
 
 ---
 
@@ -602,7 +603,7 @@ $$\left.\frac{d^nD}{dx^n}\right\rvert_{\gamma_n} = 0 \; \exists \gamma_n \in (a,
 
 and if we finally assume $$f$$ to be differentiable one more time (which we should if we're planning on letting $$n \longrightarrow \infty$$), we arrive at 
 
-$$\left.\frac{d^{n+1}D}{dx^{n+1}}\right\rvert_\gamma = \left.\frac{d^{n+1}f}{dx^{n+1}}\right\rvert_\gamma - M \cdot (n+1)! = 0 \Longrightarrow M = \left.\frac{d^{n+1}f}{dx^{n+1}}\right\rvert_\gamma \cdot \frac{1}{(n+1)!} \; \exists \gamma \in (a,\gamma_n) \subset (a,b)$$
+$$\left.\frac{d^{n+1}D}{dx^{n+1}}\right\rvert_\gamma = \left.\frac{d^{n+1}f}{dx^{n+1}}\right\rvert_\gamma - M \cdot (n+1)! = 0 \implies M = \left.\frac{d^{n+1}f}{dx^{n+1}}\right\rvert_\gamma \cdot \frac{1}{(n+1)!} \; \exists \gamma \in (a,\gamma_n) \subset (a,b)$$
 
 by [Sum Rule](/differential-calculus#theorem-sum-rule) and [Power Rule](/differential-calculus#theorem-power-rule). So, as long as
 
@@ -630,7 +631,7 @@ $$D(b) = D(a) = \left.\frac{dD}{dx}\right\rvert_a = \left.\frac{d^2D}{dx^2}\righ
 
 Therefore, after applying [Differentiable Implies Continuous](/differential-calculus#theorem-differentiable-implies-continuous), by [Rolle's Theorem](/differential-calculus#rolles-theorem), 
 
-$$\exists \gamma_1 \in (a,b) \mid \left.\frac{dD}{dx}\right\rvert_{\gamma_1} = 0 \Longrightarrow \exists \gamma_2 \in (a,\gamma_1) \subset (a,b) \mid \left.\frac{d^2D}{dx^2}\right\rvert_{\gamma_2} = 0 \Longrightarrow \cdots \Longrightarrow \exists \gamma_n \in (a,b) \mid \left.\frac{d^nD}{dx^n}\right\rvert_{\gamma_n} = 0 \Longrightarrow \exists \gamma \in (a,b) \mid \left.\frac{d^{n+1}D}{dx^{n+1}}\right\rvert_\gamma = \left.\frac{d^{n+1}f}{dx^{n+1}}\right\rvert_\gamma - M \cdot (n+1)! = 0 \Longrightarrow M = \left.\frac{d^{n+1}f}{dx^{n+1}}\right\rvert_\gamma \cdot \frac{1}{(n+1)!}. \text{ } \Box$$
+$$\exists \gamma_1 \in (a,b) \mid \left.\frac{dD}{dx}\right\rvert_{\gamma_1} = 0 \implies \exists \gamma_2 \in (a,\gamma_1) \subset (a,b) \mid \left.\frac{d^2D}{dx^2}\right\rvert_{\gamma_2} = 0 \implies \cdots \implies \exists \gamma_n \in (a,b) \mid \left.\frac{d^nD}{dx^n}\right\rvert_{\gamma_n} = 0 \implies \exists \gamma \in (a,b) \mid \left.\frac{d^{n+1}D}{dx^{n+1}}\right\rvert_\gamma = \left.\frac{d^{n+1}f}{dx^{n+1}}\right\rvert_\gamma - M \cdot (n+1)! = 0 \implies M = \left.\frac{d^{n+1}f}{dx^{n+1}}\right\rvert_\gamma \cdot \frac{1}{(n+1)!}. \text{ } \Box$$
 
 ---
 

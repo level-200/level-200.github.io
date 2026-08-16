@@ -1,6 +1,7 @@
 ---
 title: Vectors*
-permalink: /vectors
+permalink: /old-site-topics/vectors
+parent: Old Site Topics*
 nav_order: 4
 ---
 

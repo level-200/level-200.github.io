@@ -1,6 +1,7 @@
 ---
 title: Limits*
-permalink: /limits
+permalink: /old-site-topics/limits
+parent: Old Site Topics*
 nav_order: 2
 ---
 
@@ -22,13 +23,13 @@ $$\lim_{x \to a} f(x)$$
 
 (read as "the limit of $$f(x)$$ as $$x$$ tends to $$a$$"), if it exists, is defined as the unique value $$L \in \mathbb{R}$$ such that
 
-$$\forall \epsilon > 0 \colon \exists \delta > 0 \colon \left[ x \in (a - \delta, a + \delta) \neq a \Longrightarrow f(x) \in (L - \epsilon, L + \epsilon) \right],$$
+$$\forall \epsilon > 0 \colon \exists \delta > 0 \colon \left[ x \in (a - \delta, a + \delta) \neq a \implies f(x) \in (L - \epsilon, L + \epsilon) \right],$$
 
 $$\lim_{x \to \infty} f(x),$$
 
 if it exists, is defined as the unique value $$M \in \mathbb{R}$$ such that
 
-$$\forall \epsilon > 0 \colon \exists \delta > 0 \colon \left[ x > \delta \Longrightarrow f(x) \in (M - \epsilon, M + \epsilon) \right],$$
+$$\forall \epsilon > 0 \colon \exists \delta > 0 \colon \left[ x > \delta \implies f(x) \in (M - \epsilon, M + \epsilon) \right],$$
 
 and 
 
@@ -36,7 +37,7 @@ $$\lim_{x \to -\infty} f(x),$$
 
 if it exists, is defined as the unique value $$K \in \mathbb{R}$$ such that
 
-$$\forall \epsilon > 0 \colon \exists \delta < 0 \colon \left[ x < \delta \Longrightarrow f(x) \in (K - \epsilon, K + \epsilon) \right].$$
+$$\forall \epsilon > 0 \colon \exists \delta < 0 \colon \left[ x < \delta \implies f(x) \in (K - \epsilon, K + \epsilon) \right].$$
 
 ---
 
@@ -50,7 +51,7 @@ $$\lim_{x \to a^-} f(x)$$
 
 (read as "the limit of $$f(x)$$ as $$x$$ tends to $$a$$ from the left"), if it exists, is defined as the unique value $$L \in \mathbb{R}$$ such that
 
-$$\forall \epsilon > 0 \colon \exists \delta > 0 \colon \left[ x \in (a - \delta, a) \Longrightarrow f(x) \in (L - \epsilon, L + \epsilon) \right],$$
+$$\forall \epsilon > 0 \colon \exists \delta > 0 \colon \left[ x \in (a - \delta, a) \implies f(x) \in (L - \epsilon, L + \epsilon) \right],$$
 
 and
 
@@ -58,7 +59,7 @@ $$\lim_{x \to a^+} f(x)$$
 
 (read as "the limit of $$f(x)$$ as $$x$$ tends to $$a$$ from the right"), if it exists, is defined as the unique value $$M \in \mathbb{R}$$ such that
 
-$$\forall \epsilon > 0 \colon \exists \delta > 0 \colon \left[ x \in (a, a + \delta) \Longrightarrow f(x) \in (M - \epsilon, M + \epsilon) \right].$$
+$$\forall \epsilon > 0 \colon \exists \delta > 0 \colon \left[ x \in (a, a + \delta) \implies f(x) \in (M - \epsilon, M + \epsilon) \right].$$
 
 ## Theorem: Limit Exists Iff One-Sided Limits Agree
 
@@ -72,7 +73,7 @@ $$x \in (a - \delta, a + \delta) \neq x \Longleftrightarrow x \in (a - \delta, a
 
 Therefore
 
-$$\lim_{x \to a} f(x) = L \Longleftrightarrow \forall \epsilon > 0 \colon \exists \delta > 0 \colon \left[ x \in (a - \delta, a) \cup (a, a + \delta) \Longrightarrow f(x) \in (L - \epsilon, L + \epsilon) \right] \Longleftrightarrow \forall \epsilon > 0 \colon \exists \delta > 0 \colon \left[ x \in (a - \delta, a) \text{ or } x \in (a, a + \delta) \Longrightarrow f(x) \in (L - \epsilon, L + \epsilon) \right] \Longleftrightarrow \lim_{x \to a^-} f(x) = L = \lim_{x \to a^+} f(x). \text{ } \Box$$
+$$\lim_{x \to a} f(x) = L \Longleftrightarrow \forall \epsilon > 0 \colon \exists \delta > 0 \colon \left[ x \in (a - \delta, a) \cup (a, a + \delta) \implies f(x) \in (L - \epsilon, L + \epsilon) \right] \Longleftrightarrow \forall \epsilon > 0 \colon \exists \delta > 0 \colon \left[ x \in (a - \delta, a) \text{ or } x \in (a, a + \delta) \implies f(x) \in (L - \epsilon, L + \epsilon) \right] \Longleftrightarrow \lim_{x \to a^-} f(x) = L = \lim_{x \to a^+} f(x). \text{ } \Box$$
 
 ---
 
@@ -104,7 +105,7 @@ $$\lim_{x \to a} c = c.$$
 
 **Proof.**
 
-$$\forall \epsilon > 0, \delta > 0 \colon \left[ x \in (a - \delta, a + \delta) \Longrightarrow \left.c\right\rvert_x = c \in (c - \epsilon, c + \epsilon) \right].$$
+$$\forall \epsilon > 0, \delta > 0 \colon \left[ x \in (a - \delta, a + \delta) \implies \left.c\right\rvert_x = c \in (c - \epsilon, c + \epsilon) \right].$$
 
 Therefore, by [Definition: Limit](/limits#definition-limit),
 
@@ -118,7 +119,7 @@ $$\lim_{x \to a} x = a.$$
 
 **Proof.** Let $$\delta = \epsilon.$$ Then
 
-$$\forall \epsilon > 0 \colon \left[ x \in (a - \delta, a + \delta) \Longrightarrow x \in (a - \epsilon, a + \epsilon) \right].$$
+$$\forall \epsilon > 0 \colon \left[ x \in (a - \delta, a + \delta) \implies x \in (a - \epsilon, a + \epsilon) \right].$$
 
 Therefore, by [Definition: Limit](/limits#definition-limit),
 
@@ -136,11 +137,11 @@ $$\lim_{x \to a} cf(x) = \lim_{x \to a} 0 = 0 = 0 \cdot L = c \lim_{x \to a} f(x
 
 If $$c \neq 0$$:
 
-$$\lim_{x \to a} f(x) = L \Longrightarrow \forall \epsilon' > 0 \colon \exists \delta > 0 \colon \left[ x \in (a - \delta, a + \delta) \neq a \Longrightarrow f(x) \in (L - \epsilon', L + \epsilon') \Longrightarrow cf(x) \in (c(L - \epsilon'), c(L + \epsilon')) = (cL - c\epsilon', cL + c\epsilon') \right].$$
+$$\lim_{x \to a} f(x) = L \implies \forall \epsilon' > 0 \colon \exists \delta > 0 \colon \left[ x \in (a - \delta, a + \delta) \neq a \implies f(x) \in (L - \epsilon', L + \epsilon') \implies cf(x) \in (c(L - \epsilon'), c(L + \epsilon')) = (cL - c\epsilon', cL + c\epsilon') \right].$$
 
 If $$c < 0$$, this is technically improper notation; we should be writing $$(cL + c\epsilon', cL - c\epsilon').$$ But minor notational inconsistency notwithstanding, if we now let $$\epsilon = \pm c\epsilon'$$ (as appropriate such that $$\epsilon > 0$$), we have
 
-$$\forall \epsilon > 0 \colon \exists \delta > 0 \colon \left[ x \in (a - \delta, a + \delta) \neq a \Longrightarrow cf(x) \in (cL - \epsilon, cL + \epsilon) \right].$$
+$$\forall \epsilon > 0 \colon \exists \delta > 0 \colon \left[ x \in (a - \delta, a + \delta) \neq a \implies cf(x) \in (cL - \epsilon, cL + \epsilon) \right].$$
 
 $$\lim_{x \to a} cf(x) = cL = c \lim_{x \to a} f(x)$$
 
@@ -158,7 +159,7 @@ $$\lim_{x \to a} [f(x) + g(x)] = \lim_{x \to a} f(x) + \lim_{x \to a} g(x).$$
 
 Because both limits on the right-hand side exist, we know that
 
-$$\forall \epsilon' > 0 \colon \exists \delta > 0 \colon \left[ x \in (a - \delta, a + \delta) \neq a \Longrightarrow f(x) \in (L - \epsilon', L + \epsilon'), g(x) \in (M - \epsilon', M + \epsilon') \Longrightarrow f(x) + g(x) \in (L + M - 2\epsilon', L + M + 2\epsilon') \right].$$
+$$\forall \epsilon' > 0 \colon \exists \delta > 0 \colon \left[ x \in (a - \delta, a + \delta) \neq a \implies f(x) \in (L - \epsilon', L + \epsilon'), g(x) \in (M - \epsilon', M + \epsilon') \implies f(x) + g(x) \in (L + M - 2\epsilon', L + M + 2\epsilon') \right].$$
 
 If we then let $$\epsilon = 2\epsilon'$$, it follows that
 
@@ -182,7 +183,7 @@ $$\lim_{x \to a} g(x) - M = \lim_{x \to a} g(x) - \lim_{x \to a} M = M - M = 0.$
 
 Therefore
 
-$$\forall \epsilon > 0 \colon \exists \delta > 0 \colon \left[ x \in (a - \delta, a + \delta) \neq a \Longrightarrow f(x) - L, g(x) - L \in (-\sqrt\epsilon, \sqrt\epsilon) \Longrightarrow (f(x) - L)(g(x) - M) \in (-\epsilon, \epsilon) \right],$$
+$$\forall \epsilon > 0 \colon \exists \delta > 0 \colon \left[ x \in (a - \delta, a + \delta) \neq a \implies f(x) - L, g(x) - L \in (-\sqrt\epsilon, \sqrt\epsilon) \implies (f(x) - L)(g(x) - M) \in (-\epsilon, \epsilon) \right],$$
 
 and thus we have that
 
@@ -190,7 +191,7 @@ $$\lim_{x \to a} (f(x) - L)(g(x) - M) = 0.$$
 
 If we then expand the product and apply [Limit of Constant Is Constant](/limits#theorem-limit-of-constant-is-constant), [Limits and Constant Factors Commute](/limits#theorem-limits-and-constant-factors-commute), and [Limit of Sum Is Sum of Limits](/limits#theorem-limit-of-sum-is-sum-of-limits):
 
-$$\lim_{x \to a} (f(x) - L)(g(x) - M) = \lim_{x \to a} f(x)g(x) - Mf(x) - Lg(x) + LM = \lim_{x \to a} f(x)g(x) + \lim_{x \to a} -Mf(x) + \lim_{x \to a} - Lg(x) + \lim_{x \to a} LM = \lim_{x \to a} f(x)g(x) + -ML -LM + LM = 0 \Longrightarrow \lim_{x \to a} f(x)g(x) = LM = \lim_{x \to a} f(x) \lim_{x \to a} g(x). \text{ } \Box$$
+$$\lim_{x \to a} (f(x) - L)(g(x) - M) = \lim_{x \to a} f(x)g(x) - Mf(x) - Lg(x) + LM = \lim_{x \to a} f(x)g(x) + \lim_{x \to a} -Mf(x) + \lim_{x \to a} - Lg(x) + \lim_{x \to a} LM = \lim_{x \to a} f(x)g(x) + -ML -LM + LM = 0 \implies \lim_{x \to a} f(x)g(x) = LM = \lim_{x \to a} f(x) \lim_{x \to a} g(x). \text{ } \Box$$
 
 ## Theorem: Limit of Ratio Is Ratio of Limits
 
@@ -200,13 +201,13 @@ $$\lim_{x \to a} \frac{f(x)}{g(x)} = \frac{\underset{x \to a}{\lim} f(x)}{\under
 
 **Proof.** Using the fact that $$\underset{x \to a}{\lim} g(x) = M$$, we have that
 
-$$\exists \delta_1 > 0 \colon \left[ x \in (a - \delta_1, a + \delta_1) \neq a \Longrightarrow g(x) \in \left( \frac{M}{2}, \frac{3M}{2} \right) \Longrightarrow \lvert g(x) \rvert > \frac{\lvert M \rvert}{2} \Longrightarrow \frac{1}{\lvert g(x) \rvert} < \frac{2}{\lvert M \rvert} \right],$$
+$$\exists \delta_1 > 0 \colon \left[ x \in (a - \delta_1, a + \delta_1) \neq a \implies g(x) \in \left( \frac{M}{2}, \frac{3M}{2} \right) \implies \lvert g(x) \rvert > \frac{\lvert M \rvert}{2} \implies \frac{1}{\lvert g(x) \rvert} < \frac{2}{\lvert M \rvert} \right],$$
 
-$$\forall \epsilon > 0 \colon \exists \delta_2 > 0 \colon \left[ x \in (a - \delta_2, a + \delta_2) \neq a \Longrightarrow g(x) \in \left( M - \frac{M^2}{2} \epsilon, M + \frac{M^2}{2} \epsilon \right) \Longrightarrow \lvert g(x) - M\rvert < \frac{M^2}{2} \epsilon \right].$$
+$$\forall \epsilon > 0 \colon \exists \delta_2 > 0 \colon \left[ x \in (a - \delta_2, a + \delta_2) \neq a \implies g(x) \in \left( M - \frac{M^2}{2} \epsilon, M + \frac{M^2}{2} \epsilon \right) \implies \lvert g(x) - M\rvert < \frac{M^2}{2} \epsilon \right].$$
 
 Note the slightly improper notation: If $$M < 0$$ then the interval on the first line should be $$\left( \frac{3M}{2}, \frac{M}{2} \right)$$, not the other way around. Regardless, we can use the above two results to now show the following:
 
-$$\forall \epsilon > 0 \colon \exists \delta = \operatorname{min}(\delta_1, \delta_2) > 0 \colon \left[ x \in (a - \delta, a + \delta) \neq a \Longrightarrow \left\lvert \frac{1}{g(x)} - \frac{1}{M} \right\rvert = \left\lvert \frac{M - g(x)}{Mg(x)} \right\rvert = \frac{1}{\lvert M \rvert} \frac{1}{\lvert g(x) \rvert} \lvert g(x) - M \rvert < \frac{1}{\lvert M \rvert} \frac{2}{\lvert M \rvert} \lvert g(x) - M \rvert < \frac{1}{\lvert M \rvert} \frac{2}{\lvert M \rvert} \frac{M^2}{2} \epsilon = \epsilon \Longleftrightarrow \frac{1}{g(x)} \in \left( \frac{1}{M} - \epsilon, \frac{1}{M} + \epsilon \right) \right].$$
+$$\forall \epsilon > 0 \colon \exists \delta = \operatorname{min}(\delta_1, \delta_2) > 0 \colon \left[ x \in (a - \delta, a + \delta) \neq a \implies \left\lvert \frac{1}{g(x)} - \frac{1}{M} \right\rvert = \left\lvert \frac{M - g(x)}{Mg(x)} \right\rvert = \frac{1}{\lvert M \rvert} \frac{1}{\lvert g(x) \rvert} \lvert g(x) - M \rvert < \frac{1}{\lvert M \rvert} \frac{2}{\lvert M \rvert} \lvert g(x) - M \rvert < \frac{1}{\lvert M \rvert} \frac{2}{\lvert M \rvert} \frac{M^2}{2} \epsilon = \epsilon \Longleftrightarrow \frac{1}{g(x)} \in \left( \frac{1}{M} - \epsilon, \frac{1}{M} + \epsilon \right) \right].$$
 
 Thus, by [Definition: Limit](/limits#definition-limit), 
 
@@ -224,7 +225,7 @@ $$\lim_{y \to b} x = a$$
 
 and
 
-$$\exists r > 0 \colon \left[ y \in (b - r, b + r) \neq b \Longrightarrow x \neq a \right]$$
+$$\exists r > 0 \colon \left[ y \in (b - r, b + r) \neq b \implies x \neq a \right]$$
 
 then
 
@@ -232,15 +233,15 @@ $$\lim_{y \to b} f(x) = L.$$
 
 **Proof.**
 
-$$\forall \delta > 0 \colon \exists \gamma > 0 \colon \left[ y \in (b - \gamma, b + \gamma) \neq b \Longrightarrow x \in (a - \delta, a + \delta) \neq a \right]$$
+$$\forall \delta > 0 \colon \exists \gamma > 0 \colon \left[ y \in (b - \gamma, b + \gamma) \neq b \implies x \in (a - \delta, a + \delta) \neq a \right]$$
 
 and
 
-$$\forall \epsilon > 0 \colon \exists \delta > 0 \colon \left[ x \in (a - \delta, a + \delta) \neq a \Longrightarrow f(x) \in (L - \epsilon, L + \epsilon) \right].$$
+$$\forall \epsilon > 0 \colon \exists \delta > 0 \colon \left[ x \in (a - \delta, a + \delta) \neq a \implies f(x) \in (L - \epsilon, L + \epsilon) \right].$$
 
 Therefore
 
-$$\forall \epsilon > 0 \colon \exists \gamma > 0 \colon \left[ y \in (b - \gamma, b + \gamma) \neq b \Longrightarrow f(x) \in (L - \epsilon, L + \epsilon) \right].$$
+$$\forall \epsilon > 0 \colon \exists \gamma > 0 \colon \left[ y \in (b - \gamma, b + \gamma) \neq b \implies f(x) \in (L - \epsilon, L + \epsilon) \right].$$
 
 $$\lim_{y \to b} f(x) = L$$
 
@@ -268,11 +269,11 @@ $$B = \{p \in [a,b] \mid f \text{ is bounded on } [a,p]\}.$$
 
 $$a \in B.$$
 
-$$\exists c > a \colon c \in B \Longrightarrow [a, c] \subseteq B.$$
+$$\exists c > a \colon c \in B \implies [a, c] \subseteq B.$$
 
 $$f$$ is continuous from the right at $$a$$. Therefore
 
-$$\exists \delta > 0 \colon \left[ x \in [a, a + \delta) \Longrightarrow f(x) \in (f(a) - 1, f(a) + 1) \right].$$
+$$\exists \delta > 0 \colon \left[ x \in [a, a + \delta) \implies f(x) \in (f(a) - 1, f(a) + 1) \right].$$
 
 Hence $$B$$ is an interval of nonzero length, i.e.,
 
@@ -280,15 +281,15 @@ $$\exists s \in (a, b] \colon \left( B = [a, s) \text{ or } B = [a,s] \right).$$
 
 Suppose $$s < b$$. Then $$f$$ is continuous at $$s$$ and so
 
-$$\exists \delta > 0 \colon \left[ x \in (s - \delta, s + \delta) \subseteq (a, b) \Longrightarrow f(x) \in (f(s) - 1, f(s) + 1) \right],$$
+$$\exists \delta > 0 \colon \left[ x \in (s - \delta, s + \delta) \subseteq (a, b) \implies f(x) \in (f(s) - 1, f(s) + 1) \right],$$
 
 which implies that $$f$$ is bounded on $$[a, s + \delta) \subseteq [a, b)$$, contradicting $$B = [a, s) \text{ or } B = [a,s]$$. Therefore
 
-$$s = b \Longrightarrow B = [a, b) \text{ or } B = [a,b].$$
+$$s = b \implies B = [a, b) \text{ or } B = [a,b].$$
 
 $$f$$ is continuous from the left at $$b$$. Therefore
 
-$$\exists \delta > 0 \colon \left[ x \in (b - \delta, b] \Longrightarrow f(x) \in (f(b) - 1, f(b) + 1) \right].$$
+$$\exists \delta > 0 \colon \left[ x \in (b - \delta, b] \implies f(x) \in (f(b) - 1, f(b) + 1) \right].$$
 
 $$f$$ is bounded on $$[a, b]$$. $$\Box$$
 
@@ -304,7 +305,7 @@ $$\frac{1}{M - f(x)}$$
 
 is greater than zero for all $$x \in [a,b]$$ and continuous on $$(a,b)$$ by [Limit of Ratio is Ratio of Limits](/limits#theorem-limit-of-ratio-is-ratio-of-limits), [Limit of Constant Is Constant](/limits#theorem-limit-of-constant-is-constant), [Limit of Sum Is Sum of Limits](/limits#theorem-limit-of-sum-is-sum-of-limits), and the continuity of $$f$$ on $$(a,b)$$, and it is continuous from the right at $$a$$ and from the left at $$b$$ for the same reasons. It is thus bounded by the [Boundedness Theorem](/limits#boundedness-theorem) and so
 
-$$\exists K > 0 \colon \forall x \in [a,b] \colon \left( \frac{1}{M - f(x)} \leq K \Longrightarrow f(x) \leq M - \frac{1}{K} \right),$$
+$$\exists K > 0 \colon \forall x \in [a,b] \colon \left( \frac{1}{M - f(x)} \leq K \implies f(x) \leq M - \frac{1}{K} \right),$$
 
 contradicting the assumption that $$M$$ is the least upper bound of $$f$$ on $$[a,b]$$. Thus,
 

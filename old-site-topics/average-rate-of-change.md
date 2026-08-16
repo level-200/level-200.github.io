@@ -1,6 +1,7 @@
 ---
 title: Average Rates of Change*
-permalink: /average-rates-of-change
+permalink: /old-site-topics/average-rates-of-change
+parent: Old Site Topics*
 nav_order: 1
 ---
 

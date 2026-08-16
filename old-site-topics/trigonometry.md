@@ -1,6 +1,7 @@
 ---
 title: Trigonometry*
-permalink: /trigonometry
+permalink: /old-site-topics/trigonometry
+parent: Old Site Topics*
 nav_order: 5
 ---
 
@@ -76,7 +77,7 @@ $$\frac{d}{d\theta} (\cos \theta, \sin \theta) = k(-\sin \theta, \cos \theta) \;
 
 Now, because we're using radians and because this is a circle of unit radius, we know that $$\theta$$ will just be how far along the circle's edge we've travelled. So, our position will be changing at a rate of one unit per radian, and thus our velocity will have a magnitude of $$1$$. This means $$k = 1$$: Our radius is $$1$$, so the magnitude of our position is $$1$$, and the magnitude of our velocity will be $$k$$ times the magnitude of our position. Therefore
 
-$$\frac{d}{d\theta} (\cos \theta, \sin \theta) = (-\sin \theta, \cos \theta) \Longrightarrow \frac{d(\sin \theta)}{d\theta} = \cos \theta, \frac{d(\cos \theta)}{d\theta} = -\sin \theta \; \forall \theta \in \mathbb{R}.$$
+$$\frac{d}{d\theta} (\cos \theta, \sin \theta) = (-\sin \theta, \cos \theta) \implies \frac{d(\sin \theta)}{d\theta} = \cos \theta, \frac{d(\cos \theta)}{d\theta} = -\sin \theta \; \forall \theta \in \mathbb{R}.$$
 
 So $$\sin$$ and $$\cos$$ are both smooth everywhere in $$\mathbb{R}$$ since both are differentiable everywhere in $$\mathbb{R}$$ and each's derivative is plus or minus the other, which is, of course, itself differentiable. Thus, we can apply Taylor's theorem: $$\forall b, a \in \mathbb{R} \mid b \neq a, n \in \mathbb{Z} > 0 \; \exists \gamma \in (a,b) \text{ or } (b,a) \mid$$
 
@@ -296,11 +297,11 @@ $$(f(a))^2, (g(a))^2 \geq 0.$$
 
 Therefore
 
-$$(f(a))^2 = 0 = (g(a))^2 \Longrightarrow f(a) = 0 = g(a).$$
+$$(f(a))^2 = 0 = (g(a))^2 \implies f(a) = 0 = g(a).$$
 
-$$f(a) = \sin(a + b) - \sin a \cos b - \sin b \cos a = 0 \Longrightarrow \sin(a + b) = \sin a \cos b + \sin b \cos a,$$
+$$f(a) = \sin(a + b) - \sin a \cos b - \sin b \cos a = 0 \implies \sin(a + b) = \sin a \cos b + \sin b \cos a,$$
 
-$$g(a) = \cos(a + b) - \cos a \cos b + \sin a \sin b = 0 \Longrightarrow \cos(a + b) = \cos a \cos b - \sin a \sin b. \text{ } \Box$$
+$$g(a) = \cos(a + b) - \cos a \cos b + \sin a \sin b = 0 \implies \cos(a + b) = \cos a \cos b - \sin a \sin b. \text{ } \Box$$
 
 ---
 
@@ -332,9 +333,9 @@ $$\cos \left(\frac{\theta}{2} \right) = \pm \sqrt{\frac{1 + \cos \theta}{2}}.$$
 
 **Proof.** By [Double Angle Identities](/trigonometry#theorem-double-angle-identities),
 
-$$\cos(2\theta) = 1 - 2\sin^2 \theta \Longrightarrow \cos(\theta) = 1 - 2\sin^2 \left(\frac{\theta}{2} \right) \Longrightarrow \frac{1 - \cos \theta}{2} = \sin^2 \left(\frac{\theta}{2} \right) \Longrightarrow \sin \left(\frac{\theta}{2} \right) = \pm \sqrt{\frac{1 - \cos \theta}{2}},$$
+$$\cos(2\theta) = 1 - 2\sin^2 \theta \implies \cos(\theta) = 1 - 2\sin^2 \left(\frac{\theta}{2} \right) \implies \frac{1 - \cos \theta}{2} = \sin^2 \left(\frac{\theta}{2} \right) \implies \sin \left(\frac{\theta}{2} \right) = \pm \sqrt{\frac{1 - \cos \theta}{2}},$$
 
-$$\cos(2\theta) = 2\cos^2(\theta) - 1 \Longrightarrow \cos \theta = 2\cos^2 \left (\frac{\theta}{2} \right) - 1 \Longrightarrow \frac{1 + \cos \theta}{2} = \cos^2 \left(\frac{\theta}{2} \right) \Longrightarrow \cos \left(\frac{\theta}{2} \right) = \pm \sqrt{\frac{1 + \cos \theta}{2}}. \text{ } \Box$$
+$$\cos(2\theta) = 2\cos^2(\theta) - 1 \implies \cos \theta = 2\cos^2 \left (\frac{\theta}{2} \right) - 1 \implies \frac{1 + \cos \theta}{2} = \cos^2 \left(\frac{\theta}{2} \right) \implies \cos \left(\frac{\theta}{2} \right) = \pm \sqrt{\frac{1 + \cos \theta}{2}}. \text{ } \Box$$
 
 ## Theorem: Trigonometric Power Reduction Identities
 
@@ -346,9 +347,9 @@ $$\cos^2 \theta = \frac{1 + \cos(2\theta)}{2}.$$
 
 **Proof.** By [Double Angle Identities](/trigonometry#theorem-double-angle-identities),
 
-$$\cos(2\theta) = 1 - 2\sin^2 \theta \Longrightarrow \sin^2 \theta = \frac{1 - \cos(2\theta)}{2},$$
+$$\cos(2\theta) = 1 - 2\sin^2 \theta \implies \sin^2 \theta = \frac{1 - \cos(2\theta)}{2},$$
 
-$$\cos(2\theta) = 2\cos^2(\theta) - 1 \Longrightarrow \cos^2 \theta = \frac{1 + \cos(2\theta)}{2}. \text{ } \Box$$
+$$\cos(2\theta) = 2\cos^2(\theta) - 1 \implies \cos^2 \theta = \frac{1 + \cos(2\theta)}{2}. \text{ } \Box$$
 
 ---
 
@@ -454,7 +455,7 @@ $$\frac{d\arcsin x}{dx} = \frac{1}{\sqrt{1 - x^2}} \; \forall x \in [-1, 1].$$
 
 **Proof.** By [Definition: Arcsine](/trigonometry#definition-arcsine), $$\arcsin x$$ is only defined for $$x \in [-1, 1]$$ and is by [Definition: Differentiable](/differential-calculus#definition-differentiable) not differentiable for $$x = \pm 1$$ since at both $$x$$-values one side of the limit fails to exist. Now, by [Inverse Function Rule](/differential-calculus#theorem-inverse-function-rule), [Derivative of Sine](/trigonometry#theorem-derivative-of-sine), and [Pythagorean Trigonometric Identity](/trigonometry#theorem-pythagorean-trigonometric-identity),
 
-$$\left.\frac{d\arcsin y}{dy}\right\rvert_{\sin x} = \frac{1}{\cos x} \; \forall x \in \left(-\frac{\pi}{2}, \frac{\pi}{2} \right) \Longrightarrow \frac{d\arcsin x}{dx} = \frac{1}{\cos(\arcsin x)} = \frac{1}{\sqrt{\cos^2(\arcsin x)}} = \frac{1}{\sqrt{1 - \sin^2(\arcsin x)}} = \frac{1}{\sqrt{1 - x^2}} \; \forall x \in (-1, 1).$$
+$$\left.\frac{d\arcsin y}{dy}\right\rvert_{\sin x} = \frac{1}{\cos x} \; \forall x \in \left(-\frac{\pi}{2}, \frac{\pi}{2} \right) \implies \frac{d\arcsin x}{dx} = \frac{1}{\cos(\arcsin x)} = \frac{1}{\sqrt{\cos^2(\arcsin x)}} = \frac{1}{\sqrt{1 - \sin^2(\arcsin x)}} = \frac{1}{\sqrt{1 - x^2}} \; \forall x \in (-1, 1).$$
 
 However, $$\frac{1}{\sqrt{1 - x^2}}$$ is undefined for $$x = \pm 1$$, so we may still write 
 
@@ -470,7 +471,7 @@ $$\frac{d\arccos x}{dx} = \frac{-1}{\sqrt{1 - x^2}} \; \forall x \in [-1, 1].$$
 
 **Proof.** By [Definition: Arccosine](/trigonometry#definition-arccosine), $$\arccos x$$ is only defined for $$x \in [-1, 1]$$ and is by [Definition: Differentiable](/differential-calculus#definition-differentiable) not differentiable for $$x = \pm 1$$ since at both $$x$$-values one side of the limit fails to exist. Now, by [Inverse Function Rule](/differential-calculus#theorem-inverse-function-rule), [Derivative of Cosine](/trigonometry#theorem-derivative-of-cosine), and [Pythagorean Trigonometric Identity](/trigonometry#theorem-pythagorean-trigonometric-identity),
 
-$$\left.\frac{d\arccos y}{dy}\right\rvert_{\cos x} = \frac{-1}{\sin x} \; \forall x \in (0, \pi) \Longrightarrow \frac{d\arccos x}{dx} = \frac{-1}{\sin(\arccos x)} = \frac{-1}{\sqrt{\sin^2(\arccos x)}} = \frac{-1}{\sqrt{1 - \cos^2(\arccos x)}} = \frac{-1}{\sqrt{1 - x^2}} \; \forall x \in (-1, 1).$$
+$$\left.\frac{d\arccos y}{dy}\right\rvert_{\cos x} = \frac{-1}{\sin x} \; \forall x \in (0, \pi) \implies \frac{d\arccos x}{dx} = \frac{-1}{\sin(\arccos x)} = \frac{-1}{\sqrt{\sin^2(\arccos x)}} = \frac{-1}{\sqrt{1 - \cos^2(\arccos x)}} = \frac{-1}{\sqrt{1 - x^2}} \; \forall x \in (-1, 1).$$
 
 However, $$\frac{-1}{\sqrt{1 - x^2}}$$ is undefined for $$x = \pm 1$$, so we may still write 
 
@@ -486,11 +487,11 @@ $$\frac{d\arctan x}{dx} = \frac{1}{1 + x^2} \; \forall x \in \mathbb{R}.$$
 
 **Proof.** By [Definition: Arctangent](/trigonometry#definition-arctangent), [Inverse Function Rule](/differential-calculus#theorem-inverse-function-rule), and [Derivative of Tangent](/trigonometry#theorem-derivative-of-tangent),
 
-$$\left.\frac{d\arctan y}{dy}\right\rvert_{\tan x} = \frac{1}{\sec^2 x} \; \forall x \in \left(-\frac{\pi}{2}, \frac{\pi}{2} \right) \Longrightarrow \frac{d\arctan x}{dx} = \frac{1}{\sec^2(\arctan x)} \; \forall x \in \mathbb{R}.$$
+$$\left.\frac{d\arctan y}{dy}\right\rvert_{\tan x} = \frac{1}{\sec^2 x} \; \forall x \in \left(-\frac{\pi}{2}, \frac{\pi}{2} \right) \implies \frac{d\arctan x}{dx} = \frac{1}{\sec^2(\arctan x)} \; \forall x \in \mathbb{R}.$$
 
 But by [Pythagorean Trigonometric Identity](/trigonometry#theorem-pythagorean-trigonometric-identity), [Definition: Tangent](/trigonometry#definition-tangent), and [Definition: Secant](/trigonometry#definition-secant),
 
-$$\cos^2 x + \sin^2 x = 1 \; \forall x \in \mathbb{R} \Longrightarrow 1 + \tan^2 x = \sec^2 x \; \forall x \in \mathbb{R}.$$
+$$\cos^2 x + \sin^2 x = 1 \; \forall x \in \mathbb{R} \implies 1 + \tan^2 x = \sec^2 x \; \forall x \in \mathbb{R}.$$
 
 Therefore
 
@@ -502,11 +503,11 @@ $$\frac{d\operatorname{arccot} x}{dx} = \frac{-1}{1 + x^2} \; \forall x \in \mat
 
 **Proof.** By [Definition: Arccotangent](/trigonometry#definition-arctangent), [Inverse Function Rule](/differential-calculus#theorem-inverse-function-rule), and [Derivative of Cotangent](/trigonometry#theorem-derivative-of-cotangent),
 
-$$\left.\frac{d\operatorname{arccot} y}{dy}\right\rvert_{\cot x} = \frac{-1}{\csc^2 x} \; \forall x \in (0, \pi) \Longrightarrow \frac{d\operatorname{arccot} x}{dx} = \frac{-1}{\csc^2(\operatorname{arccot} x)} \; \forall x \in \mathbb{R}.$$
+$$\left.\frac{d\operatorname{arccot} y}{dy}\right\rvert_{\cot x} = \frac{-1}{\csc^2 x} \; \forall x \in (0, \pi) \implies \frac{d\operatorname{arccot} x}{dx} = \frac{-1}{\csc^2(\operatorname{arccot} x)} \; \forall x \in \mathbb{R}.$$
 
 But by [Pythagorean Trigonometric Identity](/trigonometry#theorem-pythagorean-trigonometric-identity), [Definition: Cotangent](/trigonometry#definition-cotangent), and [Definition: Cosecant](/trigonometry#definition-cosecant),
 
-$$\cos^2 x + \sin^2 x = 1 \; \forall x \in \mathbb{R} \Longrightarrow \cot^2 x + 1 = \csc^2 x \; \forall x \in \mathbb{R}.$$
+$$\cos^2 x + \sin^2 x = 1 \; \forall x \in \mathbb{R} \implies \cot^2 x + 1 = \csc^2 x \; \forall x \in \mathbb{R}.$$
 
 Therefore
 
@@ -518,13 +519,13 @@ $$\frac{d\operatorname{arcsec} x}{dx} = \frac{1}{\lvert x \rvert \sqrt{x^2 - 1}}
 
 **Proof.** By [Definition: Arcsecant](/trigonometry#definition-arcsecant), $$\operatorname{arcsec} x$$ is only defined for $$x \in (-\infty, -1] \cup [1, \infty)$$ and is by [Definition: Differentiable](/differential-calculus#definition-differentiable) not differentiable for $$x = \pm 1$$ since at both $$x$$-values one side of the limit fails to exist. Now, by [Inverse Function Rule](/differential-calculus#theorem-inverse-function-rule) and [Derivative of Secant](/trigonometry#theorem-derivative-of-secant),
 
-$$\left.\frac{d\operatorname{arcsec} y}{dy}\right\rvert_{\sec x} = \frac{1}{\sec x \tan x} \; \forall x \in (0, \pi) \neq \frac{\pi}{2} \Longrightarrow \frac{d\operatorname{arcsec} x}{dx} = \frac{1}{\sec(\operatorname{arcsec} x) \tan(\operatorname{arcsec} x)} = \frac{1}{x \tan(\operatorname{arcsec} x)} \; \forall x \in (-\infty, -1) \cup (1, \infty).$$
+$$\left.\frac{d\operatorname{arcsec} y}{dy}\right\rvert_{\sec x} = \frac{1}{\sec x \tan x} \; \forall x \in (0, \pi) \neq \frac{\pi}{2} \implies \frac{d\operatorname{arcsec} x}{dx} = \frac{1}{\sec(\operatorname{arcsec} x) \tan(\operatorname{arcsec} x)} = \frac{1}{x \tan(\operatorname{arcsec} x)} \; \forall x \in (-\infty, -1) \cup (1, \infty).$$
 
 Now, by [Definition: Tangent](/trigonometry#definition-tangent),
 
-$$x \in (-\infty, -1] \Longrightarrow \tan(\operatorname{arcsec} x) \leq 0,$$
+$$x \in (-\infty, -1] \implies \tan(\operatorname{arcsec} x) \leq 0,$$
 
-$$x \in [1, \infty) \Longrightarrow \tan(\operatorname{arcsec} x) \geq 0.$$
+$$x \in [1, \infty) \implies \tan(\operatorname{arcsec} x) \geq 0.$$
 
 Therefore
 
@@ -536,7 +537,7 @@ $$\frac{d\operatorname{arcsec} x}{dx} = \frac{1}{\lvert x \tan(\operatorname{arc
 
 But by [Pythagorean Trigonometric Identity](/trigonometry#theorem-pythagorean-trigonometric-identity) and [Definition: Secant](/trigonometry#definition-secant),
 
-$$\cos^2 x + \sin^2 x = 1 \; \forall x \in \mathbb{R} \Longrightarrow 1 + \tan^2 x = \sec^2 x \; \forall x \in \mathbb{R} \Longrightarrow \tan^2 x = \sec^2 x - 1 \; \forall x \in \mathbb{R}.$$
+$$\cos^2 x + \sin^2 x = 1 \; \forall x \in \mathbb{R} \implies 1 + \tan^2 x = \sec^2 x \; \forall x \in \mathbb{R} \implies \tan^2 x = \sec^2 x - 1 \; \forall x \in \mathbb{R}.$$
 
 Therefore
 
@@ -556,13 +557,13 @@ $$\frac{d\operatorname{arccsc} x}{dx} = \frac{-1}{\lvert x \rvert \sqrt{x^2 - 1}
 
 **Proof.** By [Definition: Arccosecant](/trigonometry#definition-arccosecant), $$\operatorname{arccsc} x$$ is only defined for $$x \in (-\infty, -1] \cup [1, \infty)$$ and is by [Definition: Differentiable](/differential-calculus#definition-differentiable) not differentiable for $$x = \pm 1$$ since at both $$x$$-values one side of the limit fails to exist. Now, by [Inverse Function Rule](/differential-calculus#theorem-inverse-function-rule) and [Derivative of Cosecant](/trigonometry#theorem-derivative-of-cosecant),
 
-$$\left.\frac{d\operatorname{arccsc} y}{dy}\right\rvert_{\csc x} = \frac{-1}{\csc x \cot x} \; \forall x \in \left(-\frac{\pi}{2}, \frac{\pi}{2} \right) \neq 0 \Longrightarrow \frac{d\operatorname{arccsc} x}{dx} = \frac{-1}{\csc(\operatorname{arccsc} x) \cot(\operatorname{arccsc} x)} = \frac{-1}{x \cot(\operatorname{arccsc} x)} \; \forall x \in (-\infty, -1) \cup (1, \infty).$$
+$$\left.\frac{d\operatorname{arccsc} y}{dy}\right\rvert_{\csc x} = \frac{-1}{\csc x \cot x} \; \forall x \in \left(-\frac{\pi}{2}, \frac{\pi}{2} \right) \neq 0 \implies \frac{d\operatorname{arccsc} x}{dx} = \frac{-1}{\csc(\operatorname{arccsc} x) \cot(\operatorname{arccsc} x)} = \frac{-1}{x \cot(\operatorname{arccsc} x)} \; \forall x \in (-\infty, -1) \cup (1, \infty).$$
 
 Now, by [Definition: Cotangent](/trigonometry#definition-cotangent),
 
-$$x \in (-\infty, -1] \Longrightarrow \cot(\operatorname{arccsc} x) \leq 0,$$
+$$x \in (-\infty, -1] \implies \cot(\operatorname{arccsc} x) \leq 0,$$
 
-$$x \in [1, \infty) \Longrightarrow \cot(\operatorname{arccsc} x) \geq 0.$$
+$$x \in [1, \infty) \implies \cot(\operatorname{arccsc} x) \geq 0.$$
 
 Therefore
 
@@ -574,7 +575,7 @@ $$\frac{d\operatorname{arccsc} x}{dx} = \frac{-1}{\lvert x \cot(\operatorname{ar
 
 But by [Pythagorean Trigonometric Identity](/trigonometry#theorem-pythagorean-trigonometric-identity) and [Definition: Cosecant](/trigonometry#definition-cosecant),
 
-$$\cos^2 x + \sin^2 x = 1 \; \forall x \in \mathbb{R} \Longrightarrow \cot^2 x + 1 = \csc^2 x \; \forall x \in \mathbb{R} \Longrightarrow \cot^2 x = \csc^2 x - 1 \; \forall x \in \mathbb{R}.$$
+$$\cos^2 x + \sin^2 x = 1 \; \forall x \in \mathbb{R} \implies \cot^2 x + 1 = \csc^2 x \; \forall x \in \mathbb{R} \implies \cot^2 x = \csc^2 x - 1 \; \forall x \in \mathbb{R}.$$
 
 Therefore
 
