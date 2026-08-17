@@ -85,4 +85,4 @@ $$\exists! e \in X \colon \forall x \in X \colon e \cdot x = x \cdot e = x,$$
 
 $$\forall x \in X \colon \exists! x^{-1} \in X \colon x^{-1} \cdot x = x \cdot x^{-1} = e.$$
 
-**Remark.** With the above four theorems, it is easy to show that the strong definition is equivalent to the weak definition.
+**Remark.** With the above four theorems, it is easy to show that the strong definition is equivalent to [the weak definition](/groups#definition-group-weak-definition).
